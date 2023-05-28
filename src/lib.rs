@@ -45,6 +45,12 @@ impl Int8{
         };
         _temp
     }
+    pub fn to_string(&self) -> String{
+        match self._int {
+            None => panic!("None value cannot be converted to type `String`"),
+            Some(x) => String::from(x)
+        }
+    }
 }
 impl PartialEq for Int8{
     fn eq(&self, other: &Int8) -> bool {
